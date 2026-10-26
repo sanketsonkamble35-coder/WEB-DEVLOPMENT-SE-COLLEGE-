@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input {
+      width: 200px;
+      padding: 8px;
+      margin: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 16px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 22px;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Calculator</h2>
+
+  <input type="number" id="num1" placeholder="Enter first number">
+
+  <input type="number" id="num2" placeholder="Enter second number">
+
+  <br>
+
+  <button onclick="add()">Addition</button>
+
+  <button onclick="subtract()">Subtraction</button>
+
+  <button onclick="multiply()">Multiplication</button>
+
+  <button onclick="divide()">Division</button>
+
+  <div id="result"></div>
+
+  <script>
+    function getValues() {
+      let number1 = parseFloat(document.getElementById("num1").value);
+      let number2 = parseFloat(document.getElementById("num2").value);
+
+      return [number1, number2];
+    }
+
+    function add() {
+      let values = getValues();
+      let answer = values[0] + values[1];
+
+      document.getElementById("result").innerHTML =
+        "Result: " + answer;
+    }
+
+    function subtract() {
+      let values = getValues();
+      let answer = values[0] - values[1];
+
+      document.getElementById("result").innerHTML =
+        "Result: " + answer;
+    }
+
+    function multiply() {
+      let values = getValues();
+      let answer = values[0] * values[1];
+
+      document.getElementById("result").innerHTML =
+        "Result: " + answer;
+    }
+
+    function divide() {
+      let values = getValues();
+
+      if (values[1] == 0) {
+        document.getElementById("result").innerHTML =
+          "Cannot divide by zero";
+      } else {
+        let answer = values[0] / values[1];
+
+        document.getElementById("result").innerHTML =
+          "Result: " + answer;
+      }
+    }
+  </script>
+
+</body>
+</html>

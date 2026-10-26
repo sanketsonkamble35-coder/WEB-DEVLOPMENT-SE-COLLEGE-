@@ -1,0 +1,27 @@
+<form id="studentForm" onsubmit="return validateForm()">
+  <label>Name:</label>
+  <input type="text" id="name"><br>
+
+  <label>Email:</label>
+  <input type="text" id="email"><br>
+
+  <p id="errorMessage" style="color:red;"></p>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+function validateForm() {
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let errorMessage = document.getElementById("errorMessage");
+
+  if (name === "" || email === "") {
+    errorMessage.textContent = "Please enter both Name and Email.";
+    return false; // stops the form from submitting
+  }
+
+  errorMessage.textContent = ""; // clear error if valid
+  return true; // allow submission
+}
+</script>

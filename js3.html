@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Example</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 22px;
+      color: darkblue;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>DOM Manipulation Example</h2>
+
+  <p id="message">
+    This is the original paragraph text.
+  </p>
+
+  <button onclick="changeText()">
+    Click Me
+  </button>
+
+  <script>
+    function changeText() {
+
+      document.getElementById("message").innerHTML =
+        "Updated via DOM! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
+
+    }
+  </script>
+
+</body>
+</html>

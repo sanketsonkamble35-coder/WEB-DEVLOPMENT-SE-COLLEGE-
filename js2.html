@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Validation using Regex</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      font-size: 16px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Email Validation using Regex</h2>
+
+  <input type="text" id="email"
+         placeholder="Enter your email">
+
+  <button onclick="validateEmail()">
+    Validate
+  </button>
+
+  <div id="result"></div>
+
+  <script>
+
+    function validateEmail() {
+
+      let email =
+        document.getElementById("email").value;
+
+      /*
+        Regex Explanation:
+        ^                 -> Start of string
+        [a-zA-Z0-9._%+-]+ -> Username part
+        @                 -> Must contain @
+        [a-zA-Z0-9.-]+    -> Domain name
+        \.                -> Dot symbol
+        [a-zA-Z]{2,}      -> Domain extension
+        $                 -> End of string
+      */
+
+      let emailPattern =
+        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      if (emailPattern.test(email)) {
+
+        document.getElementById("result").innerHTML =
+          "Valid Email Address";
+
+      } else {
+
+        document.getElementById("result").innerHTML =
+          "Invalid Email Address";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
