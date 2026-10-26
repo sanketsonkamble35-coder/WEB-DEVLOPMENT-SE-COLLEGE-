@@ -1,5 +1,4 @@
 # Web Development Practicals
-
 ## About the Project
 This repository contains practical programs completed as part of my Web Development coursework. The programs demonstrate the fundamentals of HTML, CSS, JavaScript, and PHP through basic web pages, styling, client-side scripting, and server-side programming.
 
@@ -9,28 +8,7 @@ This repository contains practical programs completed as part of my Web Developm
 * **JavaScript** – Client-side programming and interactivity.
 * **PHP** – Server-side scripting and form processing.
 
-## Project Structure
-WD/
-├── .vscode/
-├── 1.html
-├── 2.html
-├── 3.html
-├── 4.html
-├── cs2.html
-├── css2.html
-├── css3.html
-├── js1.html
-├── js2.html
-├── js3.html
-├── js4.html
-├── js5.html
-├── php_q1_welcome_date.php
-├── php_q2_feedback_form.php
-├── php_q3_string_operations.php
-└── README.md
-
 ## Practical Programs
-
 ### HTML
 * Basic HTML page creation.
 * Working with HTML elements and page structure.
@@ -51,7 +29,6 @@ WD/
 *The descriptions above summarize the topics indicated by the filenames.*
 
 ## How to Run
-
 ### HTML, CSS, and JavaScript
 1. Clone or download this repository.
 2. Open the project folder in Visual Studio Code.
